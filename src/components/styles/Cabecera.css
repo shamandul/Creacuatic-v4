@@ -1,0 +1,15 @@
+.text-head{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    color: #fff;
+    
+}
+.container-head{
+    height: 50vh;
+    background-size: cover;
+    background-position: bottom;
+    margin-left: 5%;
+    margin-right: 5%;
+}
