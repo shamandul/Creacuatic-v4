@@ -9,7 +9,6 @@ function UltimosList(props){
                     <Elemento
                         elementos={elemento.curso}
                         alumnos={elemento.alumnos}
-                        likes={elemento.likes}
                      />
                     )
                 })
