@@ -7,8 +7,8 @@ function UltimosList(props){
             { props.elementos.map((elemento)=> {
                 return(
                     <Elemento
-                        elementos={elemento.curso}
-                        alumnos={elemento.alumnos}
+                        texto={elemento.texto}
+                        numero={elemento.numero}
                      />
                     )
                 })

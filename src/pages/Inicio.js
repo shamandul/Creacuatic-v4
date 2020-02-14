@@ -3,28 +3,19 @@ import Cabecera from '../components/Cabecera'
 import imagen from '../images/sunset-v2.jpg'
 import Description from '../components/Description'
 import Ultimos from '../components/Ultimos'
+import './Styles/inicio.css'
+import Footer from '../components/Footer'
+//import * as firebase from 'firebase'
+import Db from './FirebaseDB'
+
+
 
 class Inicio extends Component{
     
     constructor(props){
         super(props)
         this.state={
-            data:[{
-                "id": 1,
-                "curso": "Crea tu propio acuario",
-                "alumnos": 20,
-                "likes": 17
-            },{
-                "id": 2,
-                "curso": "Cuidados en Acuarios",
-                "alumnos": 30,
-                "likes": 23
-            },{
-                "id": 3,
-                "curso": "Acuarios Agua dulce",
-                "alumnos": 100,
-                "likes": 99
-            }],
+            data:[],
             noticias:[{
                 "id": 1,
                 "noticia": "Marrajo o Maco",
@@ -37,17 +28,42 @@ class Inicio extends Component{
                 "id": 3,
                 "noticia": "Caracola Tritón",
                 "likes": 135
-            }]
+            }],
+            nombre: '',
+            cursos:[]
         }
 
     }
 
+    async componentDidMount(){
+        await this.fetchCursos()
+    }
+    fetchCursos = async () =>{
+         
+          
+    }
+
     render(){
+        Db.collection("Cursos")
+        .get()
+        .then(querySnapshot => {
+            this.setState({
+                data: querySnapshot.docs.map(doc => doc.data())
+            })
+            //this.setState.data = data
+            
+        })
+        const elementosCursos = this.state.data.map(elemento => {
+            const ele ={}
+            ele.texto = elemento.nombre
+            ele.numero = elemento.alumnos   
+            return ele
+        })
         
         const elementosNoticias = this.state.noticias.map(elemento => {
             const ele ={}
-            ele.curso = elemento.noticia
-            ele.alumnos = elemento.likes   
+            ele.texto = elemento.noticia
+            ele.numero = elemento.likes   
             return ele
         })
         return(
@@ -64,13 +80,13 @@ class Inicio extends Component{
             />
             <Ultimos
                 title="Nuevos cursos"
-                elementos = {this.state.data}
+                elementos = {elementosCursos}
             />
             <Ultimos
                 title="Últimas noticias"
                 elementos = {elementosNoticias}
             />
-            
+            <Footer/>            
             </div>
         )
     }

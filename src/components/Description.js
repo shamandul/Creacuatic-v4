@@ -5,10 +5,13 @@ class Description extends Component{
     render(){
         const {title, descripcion} = this.props
         return(
-            <div className="text-left margen">
-                <h4>{title}</h4>
-                <p>{descripcion}</p>
+            <div className="margen">
+                <div className="text-left ">
+                    <h4>{title}</h4>
+                    <p>{descripcion}</p>
+                </div>
             </div>
+            
         )
     }
 }

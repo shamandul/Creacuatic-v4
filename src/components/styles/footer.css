@@ -1,0 +1,13 @@
+.logo {
+    height: 25vh;
+    width: 25vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /*border-radius: 50%;*/
+}
+.contenedor-footer{
+    margin: 0;
+    background-color: #ffffff;
+    
+}
