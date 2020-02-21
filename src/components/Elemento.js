@@ -4,7 +4,7 @@ class Elemento extends Component{
     render(){
         const {texto, numero} = this.props
         return(
-            <div>
+            <React.Fragment>
                 <ul className="list-group">
                     <li className="list-group-item d-flex justify-content-between align-items-center" >
                         {texto}
@@ -12,7 +12,7 @@ class Elemento extends Component{
                     </li>
                     
                 </ul>
-            </div>
+            </React.Fragment>
         )
     }
 }

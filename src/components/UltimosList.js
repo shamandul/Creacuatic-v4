@@ -3,7 +3,7 @@ import Elemento from './Elemento'
 
 function UltimosList(props){
     return(
-        <div>
+        <React.Fragment>
             { props.elementos.map((elemento)=> {
                 return(
                     <Elemento
@@ -14,7 +14,7 @@ function UltimosList(props){
                     )
                 })
             }
-        </div>
+        </React.Fragment>
     )
 }
 export default UltimosList
