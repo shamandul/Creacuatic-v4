@@ -5,69 +5,70 @@ import Description from '../components/Description'
 import Ultimos from '../components/Ultimos'
 import './Styles/inicio.css'
 import Footer from '../components/Footer'
-//import * as firebase from 'firebase'
 import Db from './FirebaseDB'
 
 
 
 class Inicio extends Component{
     
-    constructor(props){
-        super(props)
-        this.state={
-            data:[],
-            noticias:[{
-                "id": 1,
-                "noticia": "Marrajo o Maco",
-                "likes": 17
-            },{
-                "id": 2,
-                "noticia": "Tiburón zorro",
-                "likes": 116
-            },{
-                "id": 3,
-                "noticia": "Caracola Tritón",
-                "likes": 135
-            }],
-            nombre: '',
-            cursos:[]
-        }
-
+    state ={
+        data:[], 
+        noticias: []
     }
-
     async componentDidMount(){
-        await this.fetchCursos()
+        await this.obtenerTodosCursos()
+        await this.obtenerTodasNoticias()
     }
-    fetchCursos = async () =>{
-         
-          
-    }
-
-    render(){
-        Db.collection("Cursos")
+    /** Obtenemos todos los Cursos */
+   async obtenerTodosCursos(){
+        await Db.collection("Cursos")
         .get()
         .then(querySnapshot => {
-            this.setState({
-                data: querySnapshot.docs.map(doc => doc.data())
+            const data = querySnapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            }))
+            this.setState ({
+                data
             })
-            //this.setState.data = data
-            
         })
+    }
+    /** Obtenemostodas las noticas */
+    async obtenerTodasNoticias(){
+       await Db.collection("Noticias")
+       .get()
+       .then(querySnapshot => {
+           let data = querySnapshot.docs.map(doc =>({ 
+            id: doc.id,
+            ...doc.data()} ))
+           console.log(data);
+           
+           this.setState ({
+               noticias: data
+    
+           })
+       })
+   }
+
+    render(){
+        /** preparamos los cursos para el componente */
         const elementosCursos = this.state.data.map(elemento => {
             const ele ={}
             ele.texto = elemento.nombre
             ele.numero = elemento.alumnos   
+            ele.id = elemento.id
             return ele
         })
-        
+        /** preparamos las noticias para el componente */
         const elementosNoticias = this.state.noticias.map(elemento => {
             const ele ={}
             ele.texto = elemento.noticia
             ele.numero = elemento.likes   
+            ele.id =elemento.id
             return ele
         })
         return(
-            <div>
+            <React.Fragment>
             <Cabecera
                 title="Cracuatic"
                 subtitle="Bienvenido a creacuatic"
@@ -87,7 +88,7 @@ class Inicio extends Component{
                 elementos = {elementosNoticias}
             />
             <Footer/>            
-            </div>
+            </React.Fragment>
         )
     }
 }

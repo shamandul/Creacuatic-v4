@@ -7,6 +7,7 @@ function UltimosList(props){
             { props.elementos.map((elemento)=> {
                 return(
                     <Elemento
+                        key={elemento.id}
                         texto={elemento.texto}
                         numero={elemento.numero}
                      />

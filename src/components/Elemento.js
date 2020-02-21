@@ -5,10 +5,10 @@ class Elemento extends Component{
         const {texto, numero} = this.props
         return(
             <div>
-                <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                <ul className="list-group">
+                    <li className="list-group-item d-flex justify-content-between align-items-center" >
                         {texto}
-                        <span class="badge badge-primary badge-pill">{numero}</span>
+                        <span className="badge badge-primary badge-pill">{numero}</span>
                     </li>
                     
                 </ul>
