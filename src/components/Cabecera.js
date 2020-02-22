@@ -12,7 +12,7 @@ class Cabecera extends Component{
                 backgroundImage: `url(${img})`
             }}>
                 <div className="text-head">
-                    <h1 className="text-sm-center text-md-right">{title}</h1>
+                    <h1 className="text-sm-center text-uppercase text-md-right">{title}</h1>
                     <h3 className="text-sm-center text-md-right">{subtitle}</h3>
                 </div>
                 

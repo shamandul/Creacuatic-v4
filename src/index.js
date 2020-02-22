@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.css'
-import Inicio from './pages/Inicio';
+import App from './components/App';
 
 const container = document.getElementById("root")
 
 
-ReactDOM.render(<Inicio />,container);
+ReactDOM.render(<App />,container);
