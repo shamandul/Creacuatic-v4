@@ -12,14 +12,16 @@ class Formacion extends Component{
                 <Navegador/>
                 <Cabecera
                     title="Creacuatic"
-                    subtitle="Bienvenido a creacuatic"
+                    subtitle="Formación"
                     img = {imagen}
                 />
                 <Description
-                    title="!Bienvenidos a creacuatic!"
-                    descripcion="Si estás interesado en aprender el mantenimiento de diferentes especies acuáticas a nivel aficionado o necesitas formación avanzada sobre temas específicos relacionados con la Biología Marina esta es tu página.
-                    Somos un equipo multidisciplinar de profesionales apasionados por los ecosistemas acuáticos, trabajando para dar el mejor asesoramiento y formación online."
+                    title="Formación en Creacuatic"
+                    descripcion="En CREACUATIC ofrecemos cursos online de formación en bilogía marina, acuariofilia y acuicultura."
                 />
+                <Description
+                title="SUSCRIPCIÓN:"
+                descripcion="Contenidos extra. Títulos certificados. Ofertas didácticas especiales."/>
                 <Footer/>         
             </React.Fragment>
         )
