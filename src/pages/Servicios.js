@@ -4,6 +4,7 @@ import Cabecera from '../components/Cabecera'
 import Description from '../components/Description'
 import Footer from '../components/Footer'
 import imagen from '../images/playa.jpg'
+import { Link } from 'react-router-dom'
 
 class Servicios extends Component{
     render(){
@@ -20,7 +21,9 @@ class Servicios extends Component{
                     descripcion="Nuestro equipo ofrece un amplio servicio de orientación y asesoramiento en todo lo relacionado con los ecosistemas acuáticos. 
                     Podrás consultarnos todo lo relacionado a su biología como a la realización de proyectos (acuarios, terrarios, etc.), proporcionando datos técnicos, biológicos, temáticos, de equipamiento y materiales necesarios.
                     Además, si tienes problemas en tus instalaciones, nosotros podemos solucionarlos, así como de mejorarlas."
-                />
+                >
+                    <Link  to="/">+Info</Link>
+                </Description>
                 <Description
                 title="PROYECTOS"
                 descripcion="En CREACUATIC damos vida a tus ideas.
