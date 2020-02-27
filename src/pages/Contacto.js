@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Navegador from '../components/Navegador'
 import Cabecera from '../components/Cabecera'
 import imagen from '../images/coral.jpg'
-import formulario from '../components/FormularioContacto'
 import FormularioContacto from '../components/FormularioContacto'
+import Footer from '../components/Footer'
 
 class Contacto extends Component{
     render(){
@@ -15,7 +15,8 @@ class Contacto extends Component{
                     subtitle="Contacto"
                     img = {imagen}
                 />
-                <FormularioContacto></FormularioContacto>
+                <FormularioContacto/>
+                <Footer/>
             </React.Fragment>
         )
     }
