@@ -8,7 +8,7 @@ class Ultimos extends Component{
         
         const {title, elementos} = this.props
         return(
-            <div className="margen">
+            <div className="margen my-3">
                 <h5>{title}</h5>
                 <UltimosList
                     elementos={elementos}
