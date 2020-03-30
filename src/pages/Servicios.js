@@ -23,7 +23,7 @@ class Servicios extends Component{
                     Podrás consultarnos todo lo relacionado a su biología como a la realización de proyectos (acuarios, terrarios, etc.), proporcionando datos técnicos, biológicos, temáticos, de equipamiento y materiales necesarios.
                     Además, si tienes problemas en tus instalaciones, nosotros podemos solucionarlos, así como de mejorarlas."
                 >
-                    <Link className="enlaces" to="/"><h4>+Info</h4></Link>
+                    <Link className="enlaces" to="/servicios/asesoramiento"><h4>+Info</h4></Link>
                 </Description>
                 <Description
                 title="PROYECTOS"
