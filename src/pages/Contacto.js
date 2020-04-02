@@ -3,6 +3,7 @@ import Navegador from '../components/Navegador'
 import Cabecera from '../components/Cabecera'
 import imagen from '../images/coral.jpg'
 import FormularioContacto from '../components/FormularioContacto'
+import Descripcion from "../components/Description"
 import Footer from '../components/Footer'
 
 class Contacto extends Component{
@@ -16,6 +17,9 @@ class Contacto extends Component{
                     img = {imagen}
                 />
                 <FormularioContacto/>
+                <Descripcion
+                title=""
+                descripcion="Nuestro equipo te responderá cualquier duda en la mayor brevedad posible."></Descripcion>
                 <Footer/>
             </React.Fragment>
         )

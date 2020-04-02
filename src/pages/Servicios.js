@@ -20,16 +20,18 @@ class Servicios extends Component{
                 <Description
                     title="ASESORAMIENTO"
                     descripcion="Nuestro equipo ofrece un amplio servicio de orientación y asesoramiento en todo lo relacionado con los ecosistemas acuáticos. 
-                    Podrás consultarnos todo lo relacionado a su biología como a la realización de proyectos (acuarios, terrarios, etc.), proporcionando datos técnicos, biológicos, temáticos, de equipamiento y materiales necesarios.
-                    Además, si tienes problemas en tus instalaciones, nosotros podemos solucionarlos, así como de mejorarlas."
+                    Podrás consultarnos sobre la realización de proyectos (acuarios, terrarios, etc.), proporcionando datos técnicos, biológicos, temáticos, de 
+                    equipamiento y materiales necesarios.
+                    Además, si tienes problemas en tus instalaciones, nosotros podemos solucionarlos. Si solo quieres mejorarlas, te ofreceremos las mejores opciones."
                 >
                     <Link className="enlaces" to="/servicios/asesoramiento"><h4>+Info</h4></Link>
                 </Description>
                 <Description
                 title="PROYECTOS"
                 descripcion="En CREACUATIC damos vida a tus ideas.
+
                 Si prefieres que realicemos tu proyecto por ti, simplemente tienes que explicarnos qué es lo que quieres y nosotros lo haremos realidad.">
-                    <Link className="enlaces" to="/"><h4>+Info</h4></Link>   
+                    <Link className="enlaces" to="/servicios/proyectos"><h4>+Info</h4></Link>   
                 </Description>
                 <Description
                 title="MANTENIMIENTO"
@@ -39,13 +41,14 @@ class Servicios extends Component{
                 <Description
                 title="SALUD"
                 descripcion="La salud de los organismos que contienen nuestros acuarios es algo fundamental para poder disfrutar de ellos.
-                Inquilinos sanos, refleja un acuario sano. Cualquier muestra de estrés o enfermedad, refleja la existencia de algún problema.">
+                Inquilinos sanos, refleja un acuario sano. Cualquier muestra de estrés o enfermedad, indica la existencia de algún problema.">
                     <Link className="enlaces" to="/"><h4>+Info</h4></Link>
                 </Description>
                 <Description
                 title="SOFTWARE A MEDIDA"
-                descripcion="Gracias a la estrecha colaboración con profesionales informáticos, podemos proporcionarle el programa de control o gestión que necesite, adaptándolo a sus necesidades.
-                Los programas de gestión específicos cuentan con planning, recordatorios y avisos para que siempre estés informado.">
+                descripcion="Gracias a la estrecha colaboración con profesionales informáticos, podemos proporcionarte el programa de control o gestión que necesites, 
+                adaptándolo a tus necesidades.
+                Los programas de gestión específicos cuentan con plan de mantenimiento, recordatorios y avisos para que siempre estés informado.">
                     <Link  className="enlaces" to="/"><h4>+Info</h4></Link>
                 </Description>
                 <Footer/>         

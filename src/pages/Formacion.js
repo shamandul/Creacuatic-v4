@@ -17,8 +17,11 @@ class Formacion extends Component{
                 />
                 <Description
                     title="Formación en Creacuatic"
-                    descripcion="En CREACUATIC ofrecemos cursos online de formación en bilogía marina, acuariofilia y acuicultura."
+                    descripcion="En CREACUATIC ofrecemos cursos online de formación en acuariología. En ellos podrás formarte en distintos campos como la biología marina, acuariofilia, veterinaria o acuicultura entre otros.
+
+                    A continuación, tienes los cursos disponibles con títulos certificados:"
                 />
+               { /** TODO: Hacer la tabla de los cursos y SUSCRIPCIÓN */}
                 <Description
                 title="SUSCRIPCIÓN:"
                 descripcion="Contenidos extra. Títulos certificados. Ofertas didácticas especiales."/>

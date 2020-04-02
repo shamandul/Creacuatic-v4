@@ -78,8 +78,8 @@ class Inicio extends Component{
                 />
                 <Description
                     title="!Bienvenidos a creacuatic!"
-                    descripcion="Si estás interesado en aprender el mantenimiento de diferentes especies acuáticas a nivel aficionado o necesitas formación avanzada sobre temas específicos relacionados con la Biología Marina esta es tu página.
-                    Somos un equipo multidisciplinar de profesionales apasionados por los ecosistemas acuáticos, trabajando para dar el mejor asesoramiento y formación online."
+                    descripcion="Si estás interesado en aprender el mantenimiento de diferentes especies acuáticas a nivel aficionado o necesitas 
+                    formación avanzada sobre temas específicos relacionados con la acuariología, esta es tu página."
                 />
                 <Ultimos
                     title="Nuevos cursos"
