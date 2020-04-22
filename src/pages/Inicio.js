@@ -3,67 +3,69 @@ import Cabecera from '../components/Cabecera'
 import imagen from '../images/sunset-v2.jpg'
 import Description from '../components/Description'
 import Ultimos from '../components/Ultimos'
+import UltimosModal from '../components/UltimosModal'
 import './Styles/inicio.css'
 import Footer from '../components/Footer'
 import Navegador from '../components/Navegador'
-import Db from './FirebaseDB'
 
 
 
 class Inicio extends Component{
     
     state ={
-        data:[], 
+        cursos:[], 
         noticias: []
     }
     async componentDidMount(){
-        await this.obtenerTodosCursos()
-        await this.obtenerTodasNoticias()
+        await this.obtenerTodosCursos();
+        await this.obtenerTodasNoticias();
     }
     /** Obtenemos todos los Cursos */
-   async obtenerTodosCursos(){
-        await Db.collection("Cursos")
-        .get()
-        .then(querySnapshot => {
-            const data = querySnapshot.docs.map(doc => ({
-                id: doc.id,
-                ...doc.data()
-            }))
-            this.setState ({
-                data
-            })
-        })
+    obtenerTodosCursos = async () => {
+        let res = await fetch('http://localhost:4000/cursos/all', {
+	        'mode': 'cors',
+	        'headers': {
+                'Access-Control-Allow-Origin': '*',
+                "Access-Control-Allow-Credentials" : true ,
+        	}
+    	});
+        let cursos =  await res.json();
+        this.setState({
+            cursos
+        });
     }
+        
     /** Obtenemostodas las noticas */
-    async obtenerTodasNoticias(){
-       await Db.collection("Noticias")
-       .get()
-       .then(querySnapshot => {
-           let data = querySnapshot.docs.map(doc =>({ 
-            id: doc.id,
-            ...doc.data()} ))
-           console.log(data);
-           
-           this.setState ({
-               noticias: data
-    
-           })
-       })
-   }
+    obtenerTodasNoticias = async () =>{
+        let res = await fetch('http://localhost:4000/noticias/all', {
+	        'mode': 'cors',
+	        'headers': {
+                'Access-Control-Allow-Origin': '*',
+                "Access-Control-Allow-Credentials" : true ,
+        	}
+    	});
+        let noticias =  await res.json();
+        this.setState({
+            noticias
+        });
+    }
+
 
     render(){
         /** preparamos los cursos para el componente */
-        const elementosCursos = this.state.data.map(elemento => {
+        const elementosCursos = this.state.cursos.map(elemento => {
             const ele ={}
-            ele.texto = elemento.nombre
-            ele.numero = elemento.alumnos   
+            ele.titulo = elemento.nombre_curso
+            ele.descripcion = elemento.descripcion 
+            ele.numero = elemento.alumnos
+            ele.estado = elemento.estado
             ele.id = elemento.id
             return ele
         })
         /** preparamos las noticias para el componente */
         const elementosNoticias = this.state.noticias.map(elemento => {
             const ele ={}
-            ele.texto = elemento.noticia
+            ele.texto = elemento.titular
             ele.numero = elemento.likes   
             ele.id =elemento.id
             return ele
@@ -84,6 +86,9 @@ class Inicio extends Component{
                 <Ultimos
                     title="Nuevos cursos"
                     elementos = {elementosCursos}
+                />
+                <UltimosModal
+                    elementos = { elementosCursos }
                 />
                 <Ultimos
                     title="Últimas noticias"

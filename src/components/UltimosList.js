@@ -8,10 +8,13 @@ function UltimosList(props){
                 return(
                     <Elemento
                         key={elemento.id}
-                        texto={elemento.texto}
+                        titulo={elemento.titulo}
+                        descripcion={elemento.descripcion}
                         numero={elemento.numero}
+                        estado={elemento.estado}
                      />
-                    )
+                )
+                 
                 })
             }
         </React.Fragment>
