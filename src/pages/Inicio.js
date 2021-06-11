@@ -65,8 +65,10 @@ class Inicio extends Component{
         /** preparamos las noticias para el componente */
         const elementosNoticias = this.state.noticias.map(elemento => {
             const ele ={}
-            ele.texto = elemento.titular
+            ele.titulo = elemento.titular
+            ele.descripcion = elemento.descripcion
             ele.numero = elemento.likes   
+            ele.estado= 0
             ele.id =elemento.id
             return ele
         })
@@ -93,6 +95,9 @@ class Inicio extends Component{
                 <Ultimos
                     title="Últimas noticias"
                     elementos = {elementosNoticias}
+                />
+                <UltimosModal
+                    elementos = { elementosNoticias }
                 />
                 <Footer/>            
             </React.Fragment>

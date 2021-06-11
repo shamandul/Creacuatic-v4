@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
+import estadoColor from '../lib/funciones';
 
 class Modal extends Component{
     render(){
-        const {id, titulo, descripcion} = this.props
+        const {id, titulo, descripcion, estado} = this.props
+        const respuesta = estadoColor.pasarEstadoColor(estado);
         return(
             <React.Fragment>
                 <div className="modal" id={`modal-${id}`} tabIndex="-1" role="dialog">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
+                    <div className="modal-dialog" role="document" >
+                        <div className="modal-content" >
+                            <div className="modal-header"style={{
+                           backgroundImage: `linear-gradient(to right, ${'#ffffff'}  , ${respuesta.color|| '#246329'})`
+                        }}>
                                 <h5 className="modal-title">{titulo}</h5>
+                                <span className="mx-auto">{respuesta.msg}</span>
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>

@@ -25,10 +25,10 @@ class Footer extends Component{
                     <div className="col-12 col-md">
                         <h4 className="px-5">Siguenos en </h4>
                         <div className="d-flex flex-row">
-                            <a className="navbar-brand p-3" href="/"><img src={Instagram} width="30" height="30" alt=""/></a>
+                            <a className="navbar-brand p-3" href="https://www.instagram.com/creacuatic/"><img src={Instagram} width="30" height="30" alt=""/></a>
                             <a className="navbar-brand p-3" href="/"><img src={Twitter} width="30" height="30" alt=""/></a>
                             <a className="navbar-brand p-3" href="/"><img src={Youtube} width="30" height="30" alt=""/></a>
-                            <a className="navbar-brand p-3" href="/"><img src={Facebook} width="30" height="30" alt=""/></a>
+                            <a className="navbar-brand p-3" href="https://www.facebook.com/creacuatic/"><img src={Facebook} width="30" height="30" alt=""/></a>
                         </div>
                     </div>
 

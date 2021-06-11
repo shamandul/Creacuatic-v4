@@ -15,7 +15,7 @@ function App(){
             <Route exact path="/formacion" component={ Formacion }/>
             <Route exact path="/servicios" component={ Servicios }/>
             <Route exact path="/servicios/asesoramiento" component={ Asesoramiento }/>
-            <Route exact path="/servicios/proyectos" component={ Proyectos }/>
+            <Route exact path="/se'rvicios/proyectos" component={ Proyectos }/>
             <Route exact path="/about" component={ About }/>
             <Route exact path="/contacto" component={ Contacto }/>
         </BrowserRouter>

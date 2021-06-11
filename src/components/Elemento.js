@@ -1,34 +1,17 @@
 import React, { Component } from 'react'
+import {pasarEstadoColor} from '../lib/funciones';
 
 class Elemento extends Component{
     render(){
         const {id, titulo,  numero, estado} = this.props
-
-        let color='#d11820', msg='nuevo';
-        //let style={ color: '$(color)'}
-        switch (estado){
-            case 1:
-                // estado 1, Proximamente
-                color = '#fbdd05';
-                msg = 'Proximamente';
-                break;
-            case 2:
-                // estado 2, Empezado
-                color = '#05f140';
-                msg = 'Abierto';
-                break;
-            case 3:
-                // estado 3, Terminado
-                color = '#d11820';
-                msg = 'Cerrado';
-                break;
-            default:
-        }
+        const respuesta = pasarEstadoColor(estado);
+        const color = respuesta.color;
+        const msg = respuesta.msg;
         return(
             <React.Fragment>
                 <ul className="list-group">
                     <li className="list-group-item d-flex justify-content-between align-items-center" >
-                        <a href="/" data-toggle="modal" data-target={`#modal-${id}`}>{titulo}</a>
+                        <a href="/" className="navbar-brand color-link" data-toggle="modal" data-target={`#modal-${id}`}>{titulo}</a>
                       
                         <span style={{
                            backgroundColor: color

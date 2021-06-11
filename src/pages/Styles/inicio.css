@@ -1,9 +1,16 @@
 body{    
-    background-color: #246329 ;   
+    background: rgb(26,170,38);
+    background: linear-gradient(90deg, rgba(26,170,38,1) 0%, rgba(36,99,41,1) 64%);
     margin: 0;
     padding: 0;
 }
 *{
     margin: 0;
     padding: 0;
+}
+.color-link{
+    color: #000000;
+}
+.color-link:hover{
+    color: #246329;
 }
