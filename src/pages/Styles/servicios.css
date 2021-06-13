@@ -1,10 +1,11 @@
-.enlaces{
-    color: rgb(0, 128, 85);
+.enlaces {
+    color: var(--color-link);
     font-style: bold;
     text-decoration: none;
 }
-.enlaces:hover{
-    color: rgb(2, 66, 45);
+
+.enlaces:hover {
+    color: var(--color-link-hover);
     font-style: bold;
     text-decoration: none;
 }

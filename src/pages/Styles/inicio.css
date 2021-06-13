@@ -1,16 +1,27 @@
-body{    
-    background: rgb(26,170,38);
-    background: linear-gradient(90deg, rgba(26,170,38,1) 0%, rgba(36,99,41,1) 64%);
+:root {
+    --bacgroud-body: rgb(26, 170, 38);
+    --bacgroud-body-linea-uno: rgba(26, 170, 38, 1);
+    --bacgroud-body-linea-dos: rgba(5, 13, 80, 0.972);
+    --color-link: #000000;
+    --color-link-hover: #246329;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
-*{
+
+body {
+    background: var(--bacgroud-body);
+    background: linear-gradient(90deg, var(--bacgroud-body-linea-uno) 0%, var(--bacgroud-body-linea-dos) 64%);
     margin: 0;
     padding: 0;
 }
-.color-link{
-    color: #000000;
+
+.color-link {
+    color: var(--color-link);
 }
-.color-link:hover{
-    color: #246329;
+
+.color-link:hover {
+    color: var(--color-link-hover);
 }
